@@ -1,0 +1,84 @@
+ @font-face{
+    font-family: 'Saira Condensed';
+    src: url('fonts/saira-condensed-thin.ttf') format('truetipe');
+ }
+body{
+    background-color:saddlebrown;
+    text-align: center;
+    color:aquamarine;
+    font-size: 25px;
+    
+}
+
+h1{
+    /* включает анимацию
+    animation: название продолжительность  
+    infinite - повторяется бесконечно
+    alternate - плавнй переход*/
+    animation: glow 2s infinite alternate;
+}
+
+a{
+    display: inline-block;
+    /* замедление перехода */
+    /* сдигX сдвигY размытие цвет  */
+    /* box-shadow: 5px 5px 10px rgba(0,0,0,0.3); */
+    transition: all 1s;
+    color: rgb(212, 152, 152);
+}
+
+a:hover{
+    /* transform: scale(1.2);   */
+      /* transform: rotate(-45deg); */
+    /* transform: translatey(-50px); */
+    color: red;
+    
+
+/* эффект свечения */
+box-shadow: 0 0 15px rgba(0, 150, 255, 0.5);
+transform: translateY(-30px);
+}
+
+.Pods{
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+}
+
+.Pods:hover{
+    background: linear-gradient(45deg, #4ecdc4, #ff6b6b);  
+}
+
+/* анимация свечения заголовка*/
+@keyframes glow{
+    from{
+        text-shadow: 0 0 5px #9b59b6;
+    }
+    to{
+        text-shadow: 0 0 20px yellow, 0 0 40px yellow;
+    }
+}
+
+.hand{
+    font-size: 40px;
+    animation: handi 1.5s infinite alternate;
+}
+
+@keyframes handi{
+    0%, 100%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-45deg);
+    }
+}
+
+header{
+    background-color: rgb(144, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+} 
+
+ul{
+    list-style: none;
+}
